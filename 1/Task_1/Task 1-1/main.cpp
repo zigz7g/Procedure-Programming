@@ -4,7 +4,7 @@ using namespace std;
 
 #include <cmath>
 #include <iostream>
-#include "main.h"
+
 
 /**
  * @brief Функция нахождения  математического выражения.
@@ -39,6 +39,8 @@ double SecondPrimer(double x, double y, double z)
 */
 int main()
 {
+    setlocale(LC_ALL, "Russian");
+
     double FirstVariable, SecondVariable, ThirdVariable;
     FirstVariable = 0.3;
     SecondVariable = 2.9;

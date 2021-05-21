@@ -23,9 +23,13 @@ double Caloric(double m, double t1, double t0, double c)
 
 int main() 
 {
+	setlocale(LC_ALL, "Russian");
+
 	double FirstValue, SecondValue, ThirdValue, FourthValue;
+
 	cout << "Please enter mass, fist temperature, second temperature and c value\n";
 	cin >> FirstValue >> SecondValue >> ThirdValue >> FourthValue;
 	cout << Caloric(FirstValue, SecondValue, ThirdValue, FourthValue);
+
 	return 0;
 }
