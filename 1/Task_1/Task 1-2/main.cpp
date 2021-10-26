@@ -3,33 +3,29 @@
 
 using namespace std;
 
-/**
- * @brief Ôóíêöèÿ ðàñ÷åòà ïóòè ëëîäêè ïî òå÷åíèþ.
- * @param BoatSpeed Ñêîðîñòü ëîäêè â ñòîÿ÷åé âîäå.
- * @param RiverSpeed Ñêîðîñòü òå÷åíèÿ.
- * @param Time Âðåìÿ äâèæåíèÿ ëëîäêè.
- * @return Âîçâðàùàåò çíà÷åíèå ïðîéäåííîãî ïóòè.
-*/
+/// @brief Ð¤ÑƒÐ½ÐºÑ†Ð¸Ñ Ñ€Ð°ÑÑ‡Ñ‘Ñ‚Ð° Ð¿ÑƒÑ‚Ð¸.
+/// @param BoatSpeed Ð¡ÐºÐ¾Ñ€Ð¾ÑÑ‚ÑŒ Ð»Ð¾Ð´ÐºÐ¸.
+/// @param RiverSpeed Ð¡ÐºÐ¾Ñ€Ð¾ÑÑ‚ÑŒ Ñ‚ÐµÑ‡ÐµÐ½Ð¸Ñ.
+/// @param Time Ð·Ð°Ñ‚Ñ€Ð°Ñ‡ÐµÐ½Ð½Ð¾Ðµ Ð²Ñ€ÐµÐ¼Ñ.
+/// @return Ð’Ð¾Ð·Ð²Ñ€Ð°Ñ‰Ð°ÐµÑ‚ Ñ€Ð°ÑÑ‡Ð¸Ñ‚Ð°Ð½Ð½Ñ‹Ð¹ Ð¿Ñ€Ð¾Ð¹Ð´ÐµÐ½Ñ‹Ð¹ Ð¿ÑƒÑ‚ÑŒ Ð»Ð¾Ð´ÐºÐ¾Ð¹.
 
-double TheWay(double BoatSpeed, double RiverSpeed, double Time) 
-{
-	double Way = (BoatSpeed + RiverSpeed) * Time;
-	return Way;
-}
+double TheWay(double BoatSpeed, double RiverSpeed, double Time);
 
-/**
- * @brief Òî÷êà âõîäà â ïðîãðàììó.
- * @return Âîçâðàùàåò íóëü åñëè ïðîãðàììà óñïåøíî âûïîëíåíà.
-*/
+/// @brief Ð¢Ð¾Ñ‡ÐºÐ° Ð²Ñ…Ð¾Ð´Ð° Ð² Ð¿Ñ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ñƒ.
+/// @return Ð’Ð¾Ð·Ð²Ñ€Ð°Ñ‰Ð°ÐµÑ‚ 0 Ð² ÑÐ»ÑƒÑ‡Ð°Ðµ ÑƒÑÐ¿ÐµÑ…Ð°.
 
 int main()
 {
-	setlocale(LC_ALL, "Russian");
-
 	double FirstValue, SecondValue, ThirdValue;
 
 	cin >> FirstValue >> SecondValue >> ThirdValue;
 	cout << TheWay(FirstValue, SecondValue, ThirdValue);
 
 	return 0;
+}
+
+double TheWay(double BoatSpeed, double RiverSpeed, double Time)
+{
+	double Way = (BoatSpeed + RiverSpeed) * Time;
+	return Way;
 }
