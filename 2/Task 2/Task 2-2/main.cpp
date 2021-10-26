@@ -5,35 +5,22 @@ using namespace std;
 #include <cmath>
 #include <locale>
 
-/**
- * @brief Функция расчёта функции при х>=0.5.
- * @param a Константа.
- * @param x Переменная.
- * @return Возвращает значение функции.
-*/
+/// @brief Р Р°СЃС‡С‘С‚ РїРµСЂРІРѕР№ С„СѓРЅРєС†РёРё.
+/// @param a РџР°СЂР°РјРµС‚СЂ.
+/// @param x РџРµСЂРµРјРµРЅРЅР°СЏ.
+/// @return Р’РѕР·РІСЂР°С‰Р°РµС‚ Р·РЅР°С‡РµРЅРёРµ РїРµСЂРІРѕР№ С„СѓРЅРєС†РёРё.
 
-double FirstFunction(double a, double x) 
-{
-	double function = M_PI / 2 + x * a - pow(M_E, a * x);
-	return function;
-}
+double FirstFunction(double a, double x);
 
-/**
- * @brief Функция расчёта функции при х<0.5.
- * @param a Константа.
- * @param x Переменная.
- * @return Возвращает значение функции.
-*/
+/// @brief Р Р°СЃС‡С‘С‚ РІС‚РѕСЂРѕР№ С„СѓРЅРєС†РёРё.
+/// @param a РџР°СЂР°РјРµС‚СЂ.
+/// @param x РџРµСЂРµРјРµРЅРЅР°СЏ.
+/// @return Р’РѕР·РІСЂР°С‰Р°РµС‚ Р·РЅР°С‡РµРЅРёРµ РІС‚РѕСЂРѕР№ С„СѓРЅРєС†РёРё.
 
-double SecondFunction(double a, double x) {
-	double function = pow(x, 3) * a + 28;
-	return function;
-}
+double SecondFunction(double a, double x);
 
-/**
- * @brief Точка входа в программу.
- * @return Возвращает нулль в случае успеха.
-*/
+/// @brief РўРѕС‡РєР° РІС…РѕРґР° РІ РїСЂРѕРіСЂР°РјРјСѓ.
+/// @return Р’РѕР·РІСЂСЂР°С‰Р°РµС‚ 0 РІ СЃР»СѓС‡Р°Рµ СѓСЃРїРµС…Р°.
 
 int main()
 {
@@ -43,7 +30,7 @@ int main()
 	double Variable;
 
 	cin >> Variable;
-	
+
 	if (Variable >= 0.5) {
 		cout << FirstFunction(Value, Variable);
 	}
@@ -51,4 +38,15 @@ int main()
 		cout << SecondFunction(Value, Variable);
 	}
 	return 0;
+}
+
+double FirstFunction(double a, double x)
+{
+	double function = M_PI / 2 + x * a - pow(M_E, a * x);
+	return function;
+}
+
+double SecondFunction(double a, double x) {
+	double function = pow(x, 3) * a + 28;
+	return function;
 }
