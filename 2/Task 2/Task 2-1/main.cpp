@@ -6,16 +6,37 @@ using namespace std;
 #include <cmath>
 #include <locale>
 
+/// @brief Ð Ð°ÑÑ‡ÐµÑ‚ Ð°Ð±ÑÐ¾Ð»ÑŽÑ‚Ð½Ð¾Ð¹ ÑÑƒÐ¼Ð¼Ñ‹.
+/// @param a ÐŸÐµÑ€Ð²Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ.
+/// @param b Ð’Ñ‚Ð¾Ñ€Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ.
+/// @param c Ð¢Ñ€ÐµÑ‚ÑŒÐµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ.
+/// @return Ð’Ð¾Ð·Ð²Ñ€Ð°Ñ‰Ð°ÐµÑ‚ Ð°Ð±ÑÐ¾Ð»ÑŽÑ‚Ð½ÑƒÑŽ ÑÑƒÐ¼Ð¼Ñƒ.
+ 
+double AbsoluteSum(double a, double b, double c);
 
-/**
- * @brief Ôóíêöèÿ ðàñ÷åòà êîëè÷åñòâà íåãàòèâíûõ ÷èñåë.
- * @param a Ïåðâîå ÷èñëî.
- * @param b Âòîðîå ÷èñëî.
- * @param c Òðåòüå ÷èñëî.
- * @return Âîçâðàùàåò êîëè÷åñòâî íåãàòèâíûõ ÷èñåë â íàáîðå. 
-*/
+/// @brief Ð¤ÑƒÐ½ÐºÑ†Ð¸Ñ Ð´Ð»Ñ Ð¿Ð¾Ð´ÑÑ‡Ñ‘Ñ‚Ð° ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð° Ð¾Ñ‚Ñ€Ð¸Ñ†Ð°Ñ‚ÐµÐ»ÑŒÐ½Ñ‹Ñ… Ñ‡Ð¸ÑÐµÐ».
+/// @param a ÐŸÐµÑ€Ð²Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ.
+/// @param b Ð’Ñ‚Ð¾Ñ€Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ.
+/// @param c Ð¢Ñ€ÐµÑ‚ÑŒÐµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ.
+/// @return Ð’Ð¾Ð·Ð²Ñ€Ð°Ñ‰Ð°ÐµÑ‚ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð¾Ñ‚Ñ€Ð¸Ñ†Ð°Ñ‚ÐµÐ»ÑŒÐ½Ñ‹Ñ… Ñ‡Ð¸ÑÐµÐ».
 
-double NegativeNumbers(double a, double b, double c) 
+double NegativeNumbers(double a, double b, double c);
+
+/// @brief Ð¢Ð¾Ñ‡ÐºÐ° Ð²Ñ…Ð¾Ð´Ð° Ð² Ð¿Ñ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ñƒ.
+/// @return Ð’Ð¾Ð·Ð²Ñ€Ð°Ñ‰Ð°ÐµÑ‚ 0 Ð² ÑÐ»ÑƒÑ‡Ð°Ðµ ÑƒÑÐ¿ÐµÑ…Ð°.
+
+int main()
+{
+	double FirstValue, SecondValue, ThirdValue;
+
+	cin >> FirstValue >> SecondValue >> ThirdValue;
+	cout << NegativeNumbers(FirstValue, SecondValue, ThirdValue) << '\n';
+	cout << AbsoluteSum(FirstValue, SecondValue, ThirdValue);
+
+	return 0;
+}
+
+double NegativeNumbers(double a, double b, double c)
 {
 	double quantity = 0.0;
 
@@ -31,34 +52,10 @@ double NegativeNumbers(double a, double b, double c)
 	return quantity;
 }
 
-/**
- * @brief Ôóíêöèÿ ðàñ÷¸òà àáñîëþòíîé ñóììû.
- * @param a Ïåðâîå ÷èñëî.
- * @param b Âòîðîå ÷èñëî.
- * @param c Òðåòüå ÷èñëî.
- * @return Âîçâðàùàåò àáñîëþòíóþ ñóììó òð¸õ ÷èñåë.
-*/
 
-double AbsoluteSum(double a, double b, double c) 
+
+double AbsoluteSum(double a, double b, double c)
 {
 	double sum = fabs(a) + fabs(b) + fabs(c);
 	return sum;
-}
-
-/**
- * @brief Òî÷êà âõîäà â ïðîãðàììó.
- * @return Âîçâðàùàåò íóëëü â ñëó÷àå óñïåõà
-*/
-
-int main()
-{
-	setlocale(LC_ALL, "Russian");
-
-	double FirstValue, SecondValue, ThirdValue;
-
-	cin >> FirstValue >> SecondValue >> ThirdValue;
-	cout << NegativeNumbers(FirstValue, SecondValue, ThirdValue) << '\n';
-	cout << AbsoluteSum(FirstValue, SecondValue, ThirdValue);
-
-	return 0;
 }
