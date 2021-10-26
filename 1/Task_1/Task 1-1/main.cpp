@@ -6,39 +6,25 @@ using namespace std;
 #include <iostream>
 #include <locale>
 
+/// @brief Р¤СѓРЅРєС†РёСЏ РґР»СЏ СЂР°СЃС‡С‘С‚Р° РїРµСЂРІРѕРіРѕ РїСЂРёРјРµСЂР°.
+/// @param x РџРµСЂРµРјРµРЅРЅР°СЏ С….
+/// @param y РџРµСЂРµРјРµРЅРЅР°СЏ Сѓ.
+/// @param z РџРµСЂРµРјРµРЅРЅР°СЏ z.
+/// @return Р’РѕР·РІСЂР°С‰Р°РµС‚ СЂРµС€РµРЅРёРµ РґР°РЅРЅРѕРіРѕ РїСЂРёРјРµСЂР°.
 
+double FirstPrimer(double x, double y, double z);
 
-/**
- * @brief Функция нахождения  математического выражения.
- * @param x Первая перменная.
- * @param y Вторая переменная.
- * @param z Третья переменная.
- * @return Bозвращает значение а.
-*/
-double FirstPrimer(double x, double y, double z)
-{
-    double a = (pow(z, 2) * x + pow(M_E, -x) * cos(y * x)) / (y * x - pow(M_E, -x) * sin(y * x) + 1);
-    return a;
-}
+/// @brief Р¤СѓРЅРєС†РёСЏ РґР»СЏ СЂР°СЃС‡С‘С‚Р° РІС‚РѕСЂРѕРіРѕ РїСЂРёРјРµСЂР°.
+/// @param x РџРµСЂРµРјРµРЅРЅР°СЏ С….
+/// @param y РџРµСЂРµРјРµРЅРЅР°СЏ Сѓ.
+/// @param z РџРµСЂРµРјРµРЅРЅР°СЏ z.
+/// @return Р’РѕР·РІСЂР°С‰Р°РµС‚ СЂРµС€РµРЅРёРµ РґР°РЅРЅРѕРіРѕ РїСЂРёРјРµСЂР°.
 
+double SecondPrimer(double x, double y, double z);
 
-/**
- * @brief Функция нахождения  математического выражения.
- * @param x Первая перменная.
- * @param y Вторая переменная.
- * @param z Третья переменная.
- * @return Bозвращает значение b.
-*/
-double SecondPrimer(double x, double y, double z)
-{
-    double b = pow(M_E, 2 * x) * log(z + x) - pow(y, 3 * x) * log(y - x);
-    return b;
-}
-
-/**
- * @brief Точка входа в программу.
- * @return Возвращает нуль в  случе успеха.
-*/
+/// @brief РўРѕС‡РєР° РІС…РѕРґР° РІ РїСЂРѕРіСЂР°РјРјСѓ.
+/// @return Р’РѕР·РІСЂР°С‰Р°РµС‚ 0 РІ СЃР»СѓС‡Р°Рµ СѓСЃРїРµС…Р°.
+ 
 int main()
 {
     setlocale(LC_ALL, "Russian");
@@ -52,4 +38,18 @@ int main()
     cout << SecondPrimer(FirstVariable, SecondVariable, ThirdVariable);
 
     return 0;
+}
+
+double FirstPrimer(double x, double y, double z)
+{
+    double a = (pow(z, 2) * x + pow(M_E, -x) * cos(y * x)) / (y * x - pow(M_E, -x) * sin(y * x) + 1);
+    return a;
+}
+
+
+
+double SecondPrimer(double x, double y, double z)
+{
+    double b = pow(M_E, 2 * x) * log(z + x) - pow(y, 3 * x) * log(y - x);
+    return b;
 }
