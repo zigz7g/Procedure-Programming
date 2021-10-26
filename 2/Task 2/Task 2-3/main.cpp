@@ -3,16 +3,35 @@ using namespace std;
 #include <iostream>
 #include <locale>
 
-/**
- * @brief Функция создана длял возможности узнать, возможна ли постройка двух домов на участке.
- * @param p Длина первого дома.
- * @param q Ширина первого дома.
- * @param r Длина второго дома.
- * @param s Ширина второго дома.
- * @param a Длина площадки.
- * @param b Ширина площадки.
- * @return Возвращает возможность или невозможность постройки.
-*/
+/// @brief Р¤СѓРЅРєС†РёСЏ РґР»СЏ РїР»Р°РЅРёСЂРѕРІРєРё РґРѕРјРѕРІ.
+/// @param p Р”Р»РёРЅР° РїРµСЂРІРѕРіРѕ РґРѕРјР°.
+/// @param q РЁРёСЂРёРЅР° РІС‚РѕСЂРѕРіРѕ РґРѕРјР°.
+/// @param r Р”Р»РёРЅР° РІС‚РѕСЂРѕРіРѕ РґРѕРјР°.
+/// @param s РЁРёСЂРёРЅР° РІС‚РѕСЂРѕРіРѕ РґРѕРјР°.
+/// @param a Р”Р»РёРЅР° СѓС‡Р°СЃС‚РєР°
+/// @param b РЁРёСЂРёРЅР° СѓС‡Р°СЃС‚РєР°
+/// @return Р’РѕРІР·Р°СЂР°С‰Р°РµС‚ РІРѕР·РјРѕР¶РЅРѕСЃС‚СЊ СЂР°Р·РјРµС‰РµРЅРёСЏ СѓС‡Р°СЃС‚РєР°.
+
+double Area(double p, double q, double r, double s, double a, double b);
+
+/// @brief РўРѕС‡РєР° РІС…РѕРґР° РІ РїСЂРѕРіСЂР°РјРјСѓ.
+/// @return Р’РѕР·РІСЂР°С‰Р°РµС‚ 0 РІ СЃР»СѓС‡Р°Рµ СѓСЃРїРµС…Р°.
+
+int main()
+{
+
+	double FirstLength, FirstWidth, SecondLength, SecondWidth, AreaLength, AreaWidth;
+	cin >> FirstLength >> FirstWidth >> SecondLength >> SecondWidth >> AreaLength >> AreaWidth;
+
+	if (Area(FirstLength, FirstWidth, SecondLength, SecondWidth, AreaLength, AreaWidth) == true) {
+		cout << "РњРѕР¶РЅРѕ";
+	}
+	else {
+		cout << "РќРµР»СЊР·СЏ";
+	}
+
+	return 0;
+}
 
 double Area(double p, double q, double r, double s, double a, double b)
 {
@@ -27,26 +46,4 @@ double Area(double p, double q, double r, double s, double a, double b)
 		Possibility = false;
 	}
 	return Possibility;
-}
-
-/**
- * @brief Точка входа в программу.
- * @return Возвращает нуль в случае успеха.
-*/
-
-int main() 
-{
-	setlocale(LC_ALL, "Russian");
-
-	double FirstLength, FirstWidth, SecondLength, SecondWidth, AreaLength, AreaWidth;
-	cin >> FirstLength >> FirstWidth >> SecondLength >> SecondWidth >> AreaLength >> AreaWidth;
-
-	if (Area(FirstLength, FirstWidth, SecondLength, SecondWidth, AreaLength, AreaWidth) == true) {
-		cout << "Возможно";
-	}
-	else {
-		cout << "Невозможно";
-	}
-
-	return 0;
 }
