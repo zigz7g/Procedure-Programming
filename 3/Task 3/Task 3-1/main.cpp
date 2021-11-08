@@ -5,35 +5,35 @@ using namespace std;
 #include <cmath>
 #include <iostream>
 
-/**
- * @brief Функция для табуляции заданной функции.
- * @param bx Левая точка области определения.
- * @param ex Правая точка области определения.
- * @param sx Шаг функции.
-*/
+/// @brief 
+/// @return 
 
-void FunctionTabulation(double bx, double ex, double sx) 
-{
-	double y;
-	for (bx; bx <= ex; bx +=sx) 
-	{
-		y = sqrt(1 - bx) - tan(bx);	
-		cout << y << '\n';
-	}
-	
-	
-}
+int main();
 
-/**
- * @brief Точка входа в программу.
- * @return Возвращает нуль в случае успеха.
-*/
+/// @brief 
+/// @param bx 
+/// @param ex 
+/// @param sx 
 
-int main() 
+void FunctionTabulation(double bx, double ex, double sx);
+
+
+int main()
 {
 	double BeginVariable, EndVariable, Step;
 	cin >> BeginVariable >> EndVariable >> Step;
 	FunctionTabulation(BeginVariable, EndVariable, Step);
 
 	return 0;
+}
+
+
+void FunctionTabulation(double bx, double ex, double sx)
+{
+	double y;
+	for (bx; bx <= ex; bx += sx)
+	{
+		y = sqrt(1 - bx) - tan(bx);
+		cout << y << '\n';
+	}
 }
