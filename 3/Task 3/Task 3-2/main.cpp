@@ -5,19 +5,45 @@ using namespace std;
 #include <cmath>
 #include <iostream>
 
-
 /**
- * @brief Ôóíêöèÿ äëÿ ðàñ÷¸òà ñóììû ïîñëåäîâàòåëüíîñòè.
- * @param n Ïðåäåë ïîñëåäîâàòåëüíîñòè.
- * @return Âîçâðàùàåò ñóììó âñåõ ÷ëåíîâ äàííîé ïîñëåäîâàòåëüíîñòè.
+ * @brief Ð¤ÑƒÐ½ÐºÑ†Ð¸Ñ Ð´Ð»Ñ Ñ€Ð°ÑÑ‡ÐµÑ‚Ñ‹ ÑÑƒÐ¼Ð¼Ñ‹ Ñ‡Ð»ÐµÐ½Ð¾Ð² Ð¿Ð¾ÑÐ»ÐµÐ´Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒÐ½Ð¾ÑÑ‚Ð¸, ÐºÐ¾Ñ‚Ð¾Ñ€Ñ‹Ðµ Ð¼ÐµÐ½ÑŒÑˆÐµ Ð·Ð°Ð´Ð°Ð½Ð½Ð¾Ð³Ð¾ Ñ‡Ð¸ÑÐ»Ð°.
+ * @param n ÐŸÑ€ÐµÐ´ÐµÐ» Ð¿Ð¾ÑÐ»ÐµÐ´Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒÐ½Ð¾ÑÑ‚Ð¸.
+ * @param e Ð—Ð°Ð´Ð°Ð½Ð½Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾.
+ * @return Ð’Ð¾Ð·Ð²Ñ€Ð°Ñ‰Ð°ÐµÑ‚ ÑÑƒÐ¼Ð¼Ñƒ Ñ‡Ð»ÐµÐ½Ð¾Ð² Ð¿Ð¾ÑÐ»ÐµÐ´Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒÐ½Ð¾ÑÑ‚Ð¸, ÐºÐ¾Ñ‚Ð¾Ñ€Ñ‹Ðµ Ð¼ÐµÐ½ÑŒÑˆÐµ Ð·Ð°Ð´Ð°Ð½Ð½Ð¾Ð³Ð¾ Ñ‡Ð¸ÑÐ»Ð°.
 */
 
-double SequenceSum(int n) 
+double SequenceNumber(int n, double e);
+
+/**
+ * @brief Ð¤ÑƒÐ½ÐºÑ†Ð¸Ñ Ð´Ð»Ñ Ñ€Ð°ÑÑ‡Ñ‘Ñ‚Ð° ÑÑƒÐ¼Ð¼Ñ‹ Ð¿Ð¾ÑÐ»ÐµÐ´Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒÐ½Ð¾ÑÑ‚Ð¸.
+ * @param n ÐŸÑ€ÐµÐ´ÐµÐ» Ð¿Ð¾ÑÐ»ÐµÐ´Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒÐ½Ð¾ÑÑ‚Ð¸.
+ * @return Ð’Ð¾Ð·Ð²Ñ€Ð°Ñ‰Ð°ÐµÑ‚ ÑÑƒÐ¼Ð¼Ñƒ Ð²ÑÐµÑ… Ñ‡Ð»ÐµÐ½Ð¾Ð² Ð´Ð°Ð½Ð½Ð¾Ð¹ Ð¿Ð¾ÑÐ»ÐµÐ´Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒÐ½Ð¾ÑÑ‚Ð¸.
+*/
+
+double SequenceSum(int n);
+
+/**
+ * @brief Ð¢Ð¾Ñ‡ÐºÐ° Ð²Ñ…Ð¾Ð´Ð° Ð² Ð¿Ñ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ñƒ.
+ * @return Ð’Ð¾Ð·Ð²Ñ€Ð°Ñ‰Ð°ÐµÑ‚ Ð½ÑƒÐ»ÑŒ Ð² ÑÐ»ÑƒÑ‡Ð°Ðµ ÑƒÑÐ¿ÐµÑ…Ð°.
+*/
+
+int main()
+{
+	double Sequence, Value;
+	cin >> Sequence >> Value;
+
+	cout << SequenceSum(Sequence) << '\n';
+	cout << SequenceNumber(Sequence, Value);
+
+	return 0;
+}
+
+double SequenceSum(int n)
 {
 	double k;
 	double sum = 0;
 	double fact = 1;
-	for (k = 1; k <= n; k++) 
+	for (k = 1; k <= n; k++)
 	{
 		fact = fact * k;
 		sum = sum + ((1 + k) / fact);
@@ -25,45 +51,24 @@ double SequenceSum(int n)
 	return sum;
 }
 
-/**
- * @brief Ôóíêöèÿ äëÿ ðàñ÷åòû ñóììû ÷ëåíîâ ïîñëåäîâàòåëüíîñòè, êîòîðûå ìåíüøå çàäàííîãî ÷èñëà.
- * @param n Ïðåäåë ïîñëåäîâàòåëüíîñòè.
- * @param e Çàäàííîå ÷èñëî.
- * @return Âîçâðàùàåò ñóììó ÷ëåíîâ ïîñëåäîâàòåëüíîñòè, êîòîðûå ìåíüøå çàäàííîãî ÷èñëà.
-*/
 
-double SequenceNumber(int n, double e) 
+
+double SequenceNumber(int n, double e)
 {
 	double k;
 	double sum = 0;
 	double fact = 1;
-	for (k = 1; k <= n; k++) 
+	for (k = 1; k <= n; k++)
 	{
 		fact = fact * k;
-		if (((1 + k) / fact) > e) 
+		if (((1 + k) / fact) > e)
 		{
 			sum = sum + ((1 + k) / fact);
 		}
-		else 
+		else
 		{
 			sum = sum + 0;
 		}
 	}
 	return sum;
-}
-
-/**
- * @brief Òî÷êà âõîäà â ïðîãðàììó.
- * @return Âîçâðàùàåò íóëü â ñëó÷àå óñïåõà.
-*/
-
-int main() 
-{
-	double Sequence, Value;
-	cin >> Sequence >> Value;
-
-	cout << SequenceSum(Sequence) << '\n';
-	cout << SequenceNumber(Sequence, Value) ;
-
-	return 0;
 }
