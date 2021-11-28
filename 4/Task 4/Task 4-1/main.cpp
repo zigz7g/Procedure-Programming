@@ -21,9 +21,9 @@ void FirstTask(int arr[]);
 
 void SecondTask(int arr[]);
 
-/// @brief 
-/// @param arr 
-/// @param n 
+/// @brief Функция поиска последней пары в массиве, произведение которых меньше заданного числа
+/// @param arr Массив
+/// @param n Заданное число
 
 void ThirdTask(int arr[], int n);
 
