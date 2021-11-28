@@ -32,8 +32,8 @@ int main()
 	double Sequence, Value;
 	cin >> Sequence >> Value;
 
-	cout << SequenceSum(Sequence) << '\n';
-	cout << SequenceNumber(Sequence, Value);
+	cout << "Sum = " <<SequenceSum(Sequence) << '\n';
+	cout << "Numbers sum =  "<< SequenceNumber(Sequence, Value);
 
 	return 0;
 }
