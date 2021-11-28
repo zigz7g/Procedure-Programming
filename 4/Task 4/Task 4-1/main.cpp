@@ -6,51 +6,78 @@ using namespace std;
 #include <cstdlib>
 #include <ctime>
 
-/**
- * @brief Функция для заполнения массива рандомными цифрами от -100 до 100.
- * @param arr Массив.
-*/
+/// @brief Р¤СѓРЅС†РєРёСЏ Р·Р°РїРѕР»РЅРµРЅРёСЏ РјР°СЃСЃРёРІР°.
+/// @param arr РњР°СЃСЃРёРІ.
 
-void FillArray(int arr[]) 
+void FillArray(int arr[]);
+
+/// @brief Р¤СѓРЅРєС†РёСЏ РґР»СЏ РїРѕРґСЃС‡С‘С‚Р° РєРѕР»-РІР° СЌР»РµРјРµРЅС‚РѕРІ РёР· РѕРґРЅРѕР№ С†РёС„СЂС‹.
+/// @param arr РњР°СЃСЃРёРІ.
+
+void FirstTask(int arr[]);
+
+/// @brief Р¤СѓРЅРєС†РёСЏ Р·Р°РјРµРЅС‹ СЌР»РµРјРµРЅС‚РѕРІ РІ РјР°СЃСЃРёРІРµ
+/// @param arr РњР°СЃСЃРёРІ
+
+void SecondTask(int arr[]);
+
+/// @brief 
+/// @param arr 
+/// @param n 
+
+void ThirdTask(int arr[], int n);
+
+/// @brief РўРѕС‡РєР° РІС…РѕРґР° РІ РїСЂРѕРіСЂР°РјРјСѓ.
+/// @return Р’РѕР·РІСЂР°С‰Р°РµС‚ РЅСѓР»СЊ РІ СЃР»СѓС‡Р°Рµ СѓСЃРїРµС…Р°
+
+int main()
 {
-	
+	setlocale(LC_ALL, "Russian");
+
+	int mas[200], Value;
+	cin >> Value;
+
+	FillArray(mas);
+	FirstTask(mas);
+	SecondTask(mas);
+	ThirdTask(mas, Value);
+
+	return 0;
+}
+
+
+void FillArray(int arr[])
+{
+
 	srand(time(NULL));
 	for (int i = 0; i <= 200; i++)
 	{
 		arr[i] = rand() % 201 - 100;
 		//cout << arr[i] << '\n';
 	}
-	
+
 }
 
-/**
- * @brief Функция для расчета суммы элементов, значения которых состоят из одной цифры.
- * @param arr Массив.
-*/
-
-void FirstTask(int arr[]) 
+void FirstTask(int arr[])
 {
-	cout << "Начало первого задания" << '\n';
+	
 
 	int sum = 0;
-	for (int i = 0; i <= 200; i++) 
+	for (int i = 0; i <= 200; i++)
 	{
-		if (arr[i] / 10 == 0) 
+		if (arr[i] / 10 == 0)
 		{
 			sum = sum + arr[i];
 		}
 	}
-	cout <<"Sum = " << sum << '\n';
+	cout << "Sum = " << sum << '\n';
 }
 
-/**
- * @brief Функция, которая заменяет  элементы массива между минимальным и максимальным на те же элементы в обратном порядке.
- * @param arr Массив.
-*/
+
 
 void SecondTask(int arr[])
 {
-	cout << "Начало второго задания" << '\n';
+	
 
 	int min = 0, max = 0, CountMin = 0, CountMax = 0, a = 0, b = 0, j = 0;
 
@@ -97,48 +124,24 @@ void SecondTask(int arr[])
 	}
 }
 
-/**
- * @brief Функция для поиска номера последней пары соседних элементов с одинаковыми знаками, произведение которых меньше заданного числа
- * @param arr Массив.
- * @param n Заданное число.
-*/
 
-void ThirdTask(int arr[], int n) 
+
+void ThirdTask(int arr[], int n)
 {
-	cout << "Начало третьего задания" << '\n';
+	
 
 	int Number1 = 0;
 	int Number2 = 0;
 	for (int i = 0; i <= 200; i++)
 	{
-		if (arr[i] > 0 && arr[i + 1] > 0) 
+		if (arr[i] > 0 && arr[i + 1] > 0)
 		{
-			if (arr[i] * arr[i + 1] < n) 
+			if (arr[i] * arr[i + 1] < n)
 			{
 				Number1 = i;
 				Number2 = i + 1;
 			}
 		}
 	}
-	cout << "Номер 1 числа = " << Number1 << ", Номер 2 числа = " << Number2;
-}
-
-/**
- * @brief Точка входа в программу.
- * @return Возвращает нуль в случае успеха.
-*/
-
-int main()
-{
-	setlocale(LC_ALL, "Russian");
-
-	int mas[200], Value;
-	cin >> Value;
-	
-	FillArray(mas);
-	FirstTask(mas);
-	SecondTask(mas);
-	ThirdTask(mas, Value);
-
-	return 0;
+	cout << "РџРµСЂРІС‹Р№ РЅРѕРјРµСЂ = " << Number1 << ", Р’С‚РѕСЂРѕР№ РЅРѕРјРµСЂ = " << Number2;
 }
