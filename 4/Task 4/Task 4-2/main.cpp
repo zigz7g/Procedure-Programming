@@ -34,7 +34,8 @@ void FillArray(int arr[])
 	for (int i = 0; i <= 199; i++)
 	{
 		arr[i] = rand() % 201 - 100;
-		cout << arr[i] << '\n';
+		cout.width(3);
+		cout << arr[i] << ", ";
 	}
 }
 
@@ -42,14 +43,15 @@ void FillArray(int arr[])
 
 void FirstTask(int arr[])
 {
-	cout << "Замена последнего элемента" << '\n';
+	cout << '\n'<< '\n' << "Замена последнего элемента" << '\n';
 
 	for (int i = 199; i >= 0; i--)
 	{
 		if (arr[i] % 3 == 0)
 		{
 			arr[i] = 0;
-			cout << arr[i] << '\n' << "Последний элемент, который заменили - " << i << '\n';
+			cout <<'\n' << "Последний элемент, который заменили - " << i << '\n';
+			cout << '\n' << "Теперь этот элемент равен = " << arr[i] << '\n';
 			break;
 		}
 
@@ -61,7 +63,7 @@ void FirstTask(int arr[])
 
 void SecondTask(int arr[], int K)
 {
-	cout << "Вставка заданного числа" << '\n';
+	cout << '\n' << '\n' << "Вставка заданного числа" << '\n';
 
 	for (int i = 0; i <= 199; i++)
 	{
@@ -74,7 +76,8 @@ void SecondTask(int arr[], int K)
 	}
 	for (int i = 0; i <= 199; i++)
 	{
-		cout << arr[i] << '\n';
+		cout.width(3);
+		cout << arr[i] << ", ";
 	}
 }
 
@@ -82,7 +85,7 @@ void SecondTask(int arr[], int K)
 
 void ThirdTask(int P[])
 {
-	cout << "Формировка нового массива" << '\n';
+	cout << '\n' << '\n' << "Формировка нового массива" << '\n';
 
 	long int M[200];
 
@@ -104,7 +107,8 @@ void ThirdTask(int P[])
 		{
 			M[i] = -P[i] * (i + 1);
 		}
-		cout << M[i] << '\n';
+		cout.width(3);
+		cout << M[i] << ", ";
 
 	}
 }
