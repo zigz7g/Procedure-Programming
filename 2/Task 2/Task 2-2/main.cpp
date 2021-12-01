@@ -29,6 +29,7 @@ int main()
 	double Value = 1.36;
 	double Variable;
 
+	cout << "Введите значение переменной" << endl;
 	cin >> Variable;
 
 	if (Variable >= 0.5) {
