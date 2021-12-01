@@ -16,10 +16,17 @@ double TheWay(double BoatSpeed, double RiverSpeed, double Time);
 
 int main()
 {
+	setlocale(LC_ALL, "Russian");
+
 	double FirstValue, SecondValue, ThirdValue;
 
-	cin >> FirstValue >> SecondValue >> ThirdValue;
-	cout << TheWay(FirstValue, SecondValue, ThirdValue);
+	cout << "Введите скорость лодки" << endl;
+	cin >> FirstValue;
+	cout << "Введите скорость течения" << endl;
+	cin >> SecondValue;
+	cout << "Введите время" << endl;
+	cin >> ThirdValue;
+	cout << "Путь равен " <<TheWay(FirstValue, SecondValue, ThirdValue);
 
 	return 0;
 }
