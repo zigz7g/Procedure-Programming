@@ -1,3 +1,4 @@
+
 using namespace std;
 
 #define _USE_MATH_DEFINES
@@ -29,11 +30,17 @@ double SequenceSum(int n);
 
 int main()
 {
-	double Sequence, Value;
-	cin >> Sequence >> Value;
+	setlocale(LC_ALL, "Russian");
 
-	cout << "Sum = " <<SequenceSum(Sequence) << '\n';
-	cout << "Numbers sum =  "<< SequenceNumber(Sequence, Value);
+	double Sequence, Value;
+
+	cout << "Введите до какого числа производить сумму" << endl;
+	cin >> Sequence ;
+	cout << "Введите число, больше которого будут складываться числла в прогрессии " << endl;
+	cin >> Value;
+
+	cout << "Sum = " << SequenceSum(Sequence) << '\n';
+	cout << "Numbers sum =  " << SequenceNumber(Sequence, Value);
 
 	return 0;
 }
