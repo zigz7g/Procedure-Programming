@@ -5,18 +5,20 @@ using namespace std;
 #include <cmath>
 #include <iostream>
 
-/// @brief 
-/// @return 
 
-int main();
-
-/// @brief 
-/// @param bx 
-/// @param ex 
-/// @param sx 
+/**
+ * \brief Функция для табулирования.
+ * \param bx Начальная граница
+ * \param ex Конечная граница
+ * \param sx Шаг
+*/
 
 void FunctionTabulation(double bx, double ex, double sx);
 
+/**
+ * \brief Точка входа в программу.
+ * \return Возвращает нуль в случае успеха
+*/
 
 int main()
 {
