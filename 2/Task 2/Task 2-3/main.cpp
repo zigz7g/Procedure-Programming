@@ -23,7 +23,7 @@ int main()
 	double FirstLength, FirstWidth, SecondLength, SecondWidth, AreaLength, AreaWidth;
 	cin >> FirstLength >> FirstWidth >> SecondLength >> SecondWidth >> AreaLength >> AreaWidth;
 
-	if (Area(FirstLength, FirstWidth, SecondLength, SecondWidth, AreaLength, AreaWidth) == true) {
+	if (Area(FirstLength, FirstWidth, SecondLength, SecondWidth, AreaLength, AreaWidth)) {
 		cout << "Можно";
 	}
 	else {
