@@ -5,24 +5,30 @@ using namespace std;
 #include <iostream>
 #include <cmath>
 
-/// @brief Расчет абсолютной суммы.
-/// @param a Первое значение.
-/// @param b Второе значение.
-/// @param c Третье значение.
-/// @return Возвращает абсолютную сумму.
- 
-double AbsoluteSum(double a, double b, double c);
+/**
+ * \brief Расчет абсолютной суммы. 
+ * \param a Первое значение. 
+ * \param b Второе значение. 
+ * \param c Третье значение.
+ * \return Возвращает абсолютную сумму.
+*/
 
-/// @brief Функция для подсчёта количества отрицательных чисел.
-/// @param a Первое значение.
-/// @param b Второе значение.
-/// @param c Третье значение.
-/// @return Возвращает количество отрицательных чисел.
+double AbsoluteSum(const double a, const double b, const double c);
 
-double NegativeNumbers(double a, double b, double c);
+/**
+ * \brief Функция для подсчёта количества отрицательных чисел.
+ * \param a Первое значение. 
+ * \param b Второе значение. 
+ * \param c Третье значение.
+ * \return Возвращает количество отрицательных чисел. 
+*/
 
-/// @brief Точка входа в программу.
-/// @return Возвращает 0 в случае успеха.
+double NegativeNumbers(const double a, const double b, const double c);
+
+/**
+ * \brief Точка входа в программу.  
+ * \return Возвращает 0 в случае успеха. 
+*/
 
 int main()
 {
@@ -35,9 +41,9 @@ int main()
 	return 0;
 }
 
-double NegativeNumbers(double a, double b, double c)
+double NegativeNumbers(const double a, const double b, const double c)
 {
-	double quantity = 0.0;
+	size_t quantity = 0;
 
 	if (a < 0) {
 		quantity++;
@@ -53,7 +59,7 @@ double NegativeNumbers(double a, double b, double c)
 
 
 
-double AbsoluteSum(double a, double b, double c)
+double AbsoluteSum(const double a, const double b, const double c)
 {
 	double sum = fabs(a) + fabs(b) + fabs(c);
 	return sum;
