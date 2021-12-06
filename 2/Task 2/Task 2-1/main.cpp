@@ -4,7 +4,6 @@ using namespace std;
 
 #include <iostream>
 #include <cmath>
-#include <locale>
 
 /// @brief Расчет абсолютной суммы.
 /// @param a Первое значение.
