@@ -1,4 +1,3 @@
-
 using namespace std;
 
 #define _USE_MATH_DEFINES
@@ -7,25 +6,25 @@ using namespace std;
 #include <iostream>
 
 /**
- * @brief Функция для расчеты суммы членов последовательности, которые меньше заданного числа.
- * @param n Предел последовательности.
- * @param e Заданное число.
- * @return Возвращает сумму членов последовательности, которые меньше заданного числа.
+ * \brief Функция для расчеты суммы членов последовательности, которые меньше заданного числа.
+ * \param n Предел последовательности.
+ * \param e Заданное число.
+ * \return Возвращает сумму членов последовательности, которые меньше заданного числа.
 */
 
-double SequenceNumber(int n, double e);
+double SequenceNumber(const int n, const double e);
 
 /**
- * @brief Функция для расчёта суммы последовательности.
- * @param n Предел последовательности.
- * @return Возвращает сумму всех членов данной последовательности.
+ * \brief Функция для расчёта суммы последовательности.
+ * \param n Предел последовательности.
+ * \return Возвращает сумму всех членов данной последовательности.
 */
 
-double SequenceSum(int n);
+double SequenceSum(const int n);
 
 /**
- * @brief Точка входа в программу.
- * @return Возвращает нуль в случае успеха.
+ * \brief Точка входа в программу.
+ * \return Возвращает нуль в случае успеха.
 */
 
 int main()
@@ -35,7 +34,7 @@ int main()
 	double Sequence, Value;
 
 	cout << "Введите до какого числа производить сумму" << endl;
-	cin >> Sequence ;
+	cin >> Sequence;
 	cout << "Введите число, больше которого будут складываться числла в прогрессии " << endl;
 	cin >> Value;
 
@@ -45,9 +44,9 @@ int main()
 	return 0;
 }
 
-double SequenceSum(int n)
+double SequenceSum(const int n)
 {
-	double k;
+	size_t k;
 	double sum = 0;
 	double fact = 1;
 	for (k = 1; k <= n; k++)
@@ -60,9 +59,9 @@ double SequenceSum(int n)
 
 
 
-double SequenceNumber(int n, double e)
+double SequenceNumber(const int n, const double e)
 {
-	double k;
+	size_t k;
 	double sum = 0;
 	double fact = 1;
 	for (k = 1; k <= n; k++)
@@ -71,10 +70,6 @@ double SequenceNumber(int n, double e)
 		if (((1 + k) / fact) > e)
 		{
 			sum = sum + ((1 + k) / fact);
-		}
-		else
-		{
-			sum = sum + 0;
 		}
 	}
 	return sum;
