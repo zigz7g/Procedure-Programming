@@ -11,41 +11,41 @@ using namespace std;
 
 /**
  * \brief Функция для заполнения массива
- * @param arr Массив
- * @param n Размерность
+ * \param arr Массив
+ * \param n Размерность
 */
 
 void FillArrayRandom(int* arr, const int n);
 
 /**
- * @brief Функция для заполнения массива с клавиатуры
- * @param arr Массив
- * @param n Размерность
+ * \brief Функция для заполнения массива с клавиатуры
+ * \param arr Массив
+ * \param n Размерность
 */
 
 void FillArrayFromKeybord(int* arr, const int n);
 
 /**
- * @brief Функция расчета суммы элементов значения которых из одной цифры
- * @param arr Массив
- * @param n Размерность
+ * \brief Функция расчета суммы элементов значения которых из одной цифры
+ * \param arr Массив
+ * \param n Размерность
 */
 
 void FirstTask(int* arr, const int n);
 
 /**
- * @brief Функция замены элелементов массива между максимальным и минимальным
- * @param arr Массив
- * @param n Размерность
+ * \brief Функция замены элелементов массива между максимальным и минимальным
+ * \param arr Массив
+ * \param n Размерность
 */
 
 void SecondTask(int* arr, const int n);
 
 /**
- * @brief Функция для поиска последней пары элементов, произведение которых меньше заданного числа
- * @param arr Массив
- * @param n Размерность
- * @param j Заданное число
+ * \brief Функция для поиска последней пары элементов, произведение которых меньше заданного числа
+ * \param arr Массив
+ * \param n Размерность
+ * \param j Заданное число
 */
 
 void ThirdTask(int* arr, const int n, const int j);
